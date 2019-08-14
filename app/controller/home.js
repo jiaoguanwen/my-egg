@@ -3,9 +3,9 @@
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
-  async index() {
+  index() {
     const { ctx } = this;
-    ctx.body = 'hi, egg';
+    ctx.body = ctx.service.home.hello();
   }
 }
 
