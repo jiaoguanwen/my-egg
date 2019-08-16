@@ -9,4 +9,6 @@ module.exports = app => {
   // const gzip = app.middleware.gzip({ threshold: 1024 });
   router.get('/', controller.home.index);
   // router.get('/gziptest', gzip, controller.home.index);
+  router.get('/req-detail', controller.home.reqDetail);
+  router.get('/res-detail', controller.home.resDetail);
 };

@@ -7,6 +7,16 @@ class HomeController extends Controller {
     const { ctx } = this;
     ctx.body = ctx.service.home.hello();
   }
+
+  reqDetail() {
+    const { ctx } = this;
+    ctx.body = ctx.request;
+  }
+
+  resDetail() {
+    const { ctx } = this;
+    ctx.body = ctx.response;
+  }
 }
 
 module.exports = HomeController;
